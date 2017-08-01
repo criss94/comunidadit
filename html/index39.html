@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Formualario de gmail</title>
+
+    </head>
+    <body>
+        
+        <div>
+                
+            <form action="#" method="POST">
+                <div>
+                    <label> Name
+                        <input type="text" name="firstname" placeholder="First" required>
+                        <input type="text" name="lastname" placeholder="Last" required>                
+                    </label>
+                </div>
+                <div>
+                    <label for="username"> Choose your username
+                        <input id="username" type="text" name="username" placeholder="@gmail.com" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="pass"> Create a password
+                        <input id="pass" type="password" name="password" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="pass2"> Comfirm your password
+                        <input id="pass2" type="password" name="password2" required>
+                    </label>
+                </div>
+                <div>
+                    <label>Birthday</label>
+                    <select name="birthday" required>
+                        <option value="month">Month</option>
+                    </select>
+                    <input type="text" name="day" placeholder="Day" required>
+                    <input type="text" name="year" placeholder="Year" required>
+                </div>
+                <div>
+                    <label>Gender</label>
+                    <select name="gender" required>
+                        <option value="gender">I am...</option>
+                    </select>
+                </div>
+                <div>
+                <label>Mobile phone</label>
+                <select name="mobile-pais" required>
+                    <option value="arg">meter img desde css</option>
+                </select>
+                </div>
+                <div>
+                    <label for="email"> Your current email address
+                        <input type="email" name="email" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="email"> Location
+                        <select name="location" required>
+                            <option value="arg">Argentina</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <input type="submit" value="Next step">
+                </div>
+            </form>
+
+        </div>
+
+    </body>
+</html>
