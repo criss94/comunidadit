@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style type="text/css">
+        /*********************************************************************************************
+        ******************************** estilos del form de twitter *********************************
+        **********************************************************************************************/
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        #container_twitter{width: 550px; margin: 20px auto}
+        #container_twitter .username{
+            margin-bottom: 15px;
+            width: 95%;
+            padding:12px 6px;
+            font-size:1.5em;
+            border: 2px solid #cedfe9;
+            border-radius:4px;
+            border-bottom:3px solid #cedfe9;
+            color: #b3b5b7;
+        }
+        #container_twitter .password{
+            margin-bottom: 10px;
+            width: 65%;
+            padding:12px 6px;
+            font-size:1.5em;
+            border: 2px solid #cedfe9;
+            border-radius:4px;
+            color: #515d6a;
+        }
+        #container_twitter .login{
+            margin-left: 15px;
+            background: #fff;
+            padding:12px 30px;
+            font-size: 1.8em;
+            border: 2px solid #01bcf8;
+            color: #01bcf8;
+            border-radius: 50px;
+            font-weight:bold;
+        }
+        #container_twitter .login:hover{
+            cursor: pointer;
+        }
+        #container_twitter .btn_remember{
+            color:#86959a; font-size: 1.4em
+        }
+        #container_twitter .forgot{
+            text-decoration: none;
+            color: #01bcf8;
+            font-size: 1.4em;
+            letter-spacing: 0.8px;
+        }
+        #container_twitter #remember{
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            border: 1px solid #60b0d8;
+            border-radius: 4px;
+            width: 22px;
+            height: 22px;
+            border-radius: 5px;
+            margin: 0 5px 0 0;
+            background: #01bcf8;
+            font-size: 19px;
+            position: relative;
+        }
+        #container_twitter > form > div > label > #remember:checked::after{
+            content: "\2714";
+            color: #fff;
+            position: absolute;
+            top: -4px;
+            left: 3px;
+        }
+        
+        /*********************************************************************************************
+        ******************************** estilos del form de facebook ********************************
+        **********************************************************************************************/
+        #container_facebook{
+            margin: auto;
+            width: 500px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background: #eef1f1;
+            padding: 1px 15px 25px 15px;
+            color: #444;
+        }
+        #container_facebook > p{
+            margin-top: -10px;
+            font-size: 17px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #container_facebook > form > div{margin-bottom: 12px}
+        #container_facebook > form > div > input[type="text"], input[type="email"], input[type="password"]{
+            width: 224px;
+            padding: 10px;
+            border: 1px solid #d2d2d2;
+            border-radius: 4px;
+            font-size: 20px;
+            color: #747272;
+            font-weight: 500;
+        }
+        #container_facebook > form > div > input[type="email"], input[type="password"]{
+            width: 473px;
+        }
+        #container_facebook > h1{font-size: 43px;margin-bottom: 18px}
+        #container_facebook > form > div > p{
+            font-size: 21px;
+            color: #111;
+        }            
+        #container_facebook > form > div > select[name="birthday_face"]{
+            border: 1px solid #d2d2d2;
+            padding: 6px;
+            border-radius: 4px;
+            color: #111;
+        }
+        #container_facebook > form > div > span{
+            display: inline-block;
+            width: 200px;
+            position: relative
+        }
+        #container_facebook > form > div > span > a{
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            font-size: 14px;
+            text-decoration: none;
+            margin: 0px 0px 0px 10px;
+            color: darkblue;
+        }
+        #container_facebook > form > div > label{
+            color: #111;
+            font-size: 18px;
+        }
+        #container_facebook > form > p{
+            width: 400px;
+            font-size: 13px;
+            text-align: justify;
+            color: #999;
+        }
+        #container_facebook > form > p > a{
+            color: darkblue;
+            text-decoration: none;
+        }
+        
+        #container_facebook > form > div > input[type="submit"]{
+            margin: 10px 0px 0px 0px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: #4cb969;
+            padding: 12px 20px;
+            border: 1px solid #348449;
+            border-radius: 4px;
+            font-size: 20px;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: -1px;
+            cursor: pointer;
+        }
+
+        /*********************************************************************************************
+        ******************************** estilos del form de google **********************************
+        **********************************************************************************************/
+        #container_google{
+            box-sizing: border-box;
+            margin: 0px auto;
+            width: 530px;
+            padding: 20px 25px 10px 25px;
+            background: #f0f0f0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #container_google > form > div{
+            width: 100%;
+            margin: 15px 0px 26px 0px;
+            overflow: hidden;
+        }
+        #container_google > form > div > label{
+            display: block;
+            width: 100%;
+            font-weight: bold;
+            font-size: 19px;
+            color: #333;
+            padding-bottom: 10px;
+        }
+        #container_google > form > div > input, select[name="birthday"],
+                                                select[name="gender"],
+                                                select[name="mobile-pais"],
+                                                select[name="location"]{
+            width: 95%;
+            border: 1px solid lightgrey;
+            border-top: 2px solid lightgrey;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 19px;
+            color: #444;
+            letter-spacing: 0.3px;
+            font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border-radius: 4px;
+        }
+        #container_google > form > div > select{width: 100%}        
+        #container_google > form > div > input[name="firstname"]{width: 44%}
+        #container_google > form > div > input[name="lastname"]{width: 43%}
+        #container_google > form > div > input[name="firstname"]{margin-right: 10px}
+        #container_google > form > div > input[name="username"]::-webkit-input-placeholder{text-align: right}
+        #container_google > form > div > input[name="username"]::-moz-placeholder{text-align: right}
+        #container_google > form > div > select[name="birthday"]{width: 40%;margin-right: 10px;color: #444}
+        #container_google > form > div > input[name="day"]{width: 18%;margin-right: 10px}
+        #container_google > form > div > input[name="year"]{width: 25%}
+        #container_google > form > div > div{
+            background: #fff;
+            padding: 12px 6px;
+            border: 1px solid #ccc;
+            border-top: 2px solid #ccc;
+            border-radius: 4px
+        }
+        #container_google > form > div > div > img{
+            margin-top: -5px;
+            vertical-align: middle;
+            width: 6%;
+            padding: 0px 10px;
+        }
+        #container_google > form > div > div > span{
+            display: inline-block;
+            width: 2%;
+            margin-top: -5px;
+            font-size: 8px;
+            color: darkblue;
+            vertical-align: middle;
+        }
+        #container_google > form > div > div > input[name="input_arg"]{
+            width: 80%;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #4b4b4b;
+        }
+        #container_google > form > div > input[type="submit"]{
+            width: 25%;
+            color: #fff;
+            font-weight: bolder;
+            border: 1px solid #1d5f96;
+            background: #3f92d7;
+            letter-spacing: -1px;
+            font-size: 20px;
+            padding: 12px 0px;
+            float: right;
+        }
+
+        </style>
+
+    </head>
+    <body>
+        
+        <div id="container_twitter">
+            <form action="#" method="POST">
+                <div>
+                    <input class="username" type="text" name="username" required placeholder="Phone, email or username">
+                </div>
+                <div>
+                    <input class="password" type="password" name="password" placeholder="Password" required>
+                    <input class="login" type="submit" value="Log in" required>
+                </div>
+                <div>
+                    <label for="remember" class="btn_remember">
+                        <input id="remember" type="checkbox" checked>
+                        Remember me 
+                    </label>
+                    <span>&nbsp; · &nbsp;&nbsp;</span>
+                    <a class="forgot" href="#">Forgot password?</a>
+                </div>
+            </form>
+        </div>
+
+        <hr>
+
+        <div id="container_facebook">
+            <h1>Sign Up</h1>
+            <p>It's free and always will be</p>
+            
+            <form action="#" method="POST">
+                <div>
+                    <input type="text" name="firstname" placeholder="First name" required>
+                    <input type="text" name="lastname" placeholder="Last name" required>                
+                </div>
+                <div>
+                    <input type="email" name="mobile-or-email" placeholder="Mobile number or email" required>
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="New password" required>
+                </div>
+                <div>
+                    <p>Birthday</p>
+                    <select name="birthday_face" required>
+                        <option value="month">Month</option>
+                    </select>
+                    <select name="birthday_face" required>
+                        <option value="day">Day</option>
+                    </select>
+                    <select name="birthday_face" required>
+                        <option value="year">Year</option>
+                    </select>
+                    <span><a href="#">Why do I need to provide my birthday?</span></a>
+                </div>
+                <div>
+                    <input id="f" type="radio" value="F" name="sex" checked>
+                    <label for="f">Female</label>
+                    <input id="m" type="radio" value="M" name="sex">
+                    <label for="m">Male</label>         
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing <a href="#">Terms</a>. Ipsa,
+                    voluptas mollitia incidunt <a href="#">Data Policy</a> iure laborum <a href="#">Cokkie Use</a> architecto
+                    id unde autem nostrum reprehenderit in quae. Voluptatibus suscipit, in est quasi?
+                </p>
+                <div>
+                    <input type="submit" value="Create Account">
+                </div>
+            </form>
+        </div>
+
+        <hr>
+
+        <div id="container_google">
+            <form action="#" method="POST">
+                <div>
+                    <label>Name</label>
+                    <input type="text" name="firstname" placeholder="First" required>
+                    <input type="text" name="lastname" placeholder="Last" required>
+                </div>
+                <div>
+                    <label for="username">Choose your username</label>
+                    <input id="username" type="text" name="username" placeholder="@gmail.com" required>
+                </div>
+                <div>
+                    <label for="pass">Create a password</label>
+                    <input id="pass" type="password" name="password" required>
+                </div>
+                <div>
+                    <label for="pass2">Comfirm your password</label>
+                    <input id="pass2" type="password" name="password2" required>
+                </div>
+                <div>
+                    <label>Birthday</label>
+                    <select name="birthday" required>
+                        <option value="month">Month</option>
+                    </select>
+                    <input type="text" name="day" placeholder="Day" required>
+                    <input type="text" name="year" placeholder="Year" required>
+                </div>
+                <div>
+                    <label>Gender</label>
+                    <select name="gender" required>
+                        <option value="gender">I am...</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Mobile phone</label>
+                    <div>
+                        <img src="bandera.png" alt="bandera de la argentina"><span>▼</span>
+                        <input type="text" name="input_arg" value="+54">
+                    </div>
+                </div>
+                <div>
+                    <label for="email">Your current email address</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div>
+                    <label for="email">Location</label>
+                    <select name="location" required>
+                        <option value="arg">Argentina</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="Next step">
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,196 @@
+/*reseteo todas las etiquetas*/
+*{margin: 0px;padding: 0px;border: 0px; box-sizing: border-box}
+/* general */
+html, body{
+    height:100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#container{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0px auto -40px;
+    padding: 0px 0px 60px 0px;
+}
+h1{
+    text-shadow: 4px 4px 4px #086276;
+    text-align: center;
+    padding: 15px;
+    color: #022830;
+}
+h2{
+    text-align: center;
+    padding: 30px;
+    color: #147fbd;
+    font-size: 20px;
+}
+ul{list-style-type: none}
+a{text-decoration: none}
+/* solo el header */
+#header{
+    padding: 5px 20px;
+    background: #022830;
+    color: #fff;
+    border-bottom: 1px solid #086276;
+}
+#header > a{
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px;
+}
+#header > a:hover{text-decoration: underline}
+
+#header > span{
+    font-size: 30px;
+    font-weight: bold;
+}
+#header > span > a{
+    font-size: 14px;
+    float: right;
+    line-height: 30px;
+    text-decoration: none;
+    font-weight: normal;
+    color: #fff;
+}
+
+/* de los 3 contenedores */
+#network > h3,#javascript > h3,#sugerencias > h3{
+    text-align: center;
+    color: #0a8256;
+    padding: 10px 0px 25px 0px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+/* todo dentro de network */ 
+#network, #javascript, #sugerencias{
+    float: left;
+    width: 30%;
+    background: #c8e9f0;
+    border: 1px solid #045364;
+    border-radius: 4px;
+    margin: 0px 20px 0px 20px;
+    padding: 10px;
+}
+#network > a{
+    padding-left: 10px;
+    font-size: 13px;
+    color: grey;
+    font-weight: bold;
+}
+#network > a:hover{color: #111}
+#network > p{font-size: 14px; text-align: justify; margin: 10px}
+#network > p > span{font-weight: bold; margin-right: 10px}
+#network > ul{text-align: center; margin: 10px}
+#network > ul > li {
+    display: inline-block;
+    margin-right: 10px;
+}
+#network > ul > li > h4 > a{
+    font-weight: normal;
+    font-size: 15px;
+}
+/* section javascript */
+#javascript > span{
+    font-weight: bold;
+    font-size: 14px;
+}
+#javascript > ul{
+    background: #85fab1;
+    border: 1px solid #0e371e;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+#javascript > ul:hover{
+    background: #07431a;
+    color: #fff;
+}
+#javascript > ul > li{margin-bottom: 10px;}
+#javascript > ul > li:first-child{
+    text-align: center
+}
+#javascript > ul > li > h4{
+    font-weight: normal;
+    font-size: 14px;
+}
+#javascript > ul > li > strong{
+    display: block;
+    text-align: right;
+    font-size: 14px;
+}
+#javascript > ul > li > span{
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 14px;
+}
+/* section sugerencias */
+#sugerencias > ul{text-align: center}
+#sugerencias > ul > li{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+#sugerencias > ul > li > a{color: #07433c;transition: ease 0.4s all}
+#sugerencias > ul > li > a:hover{
+    color: #111;
+    font-size: 16px;
+    transition: ease 0.4s all;
+}
+
+/* section perfil */
+#container .dev{
+    text-align: center;
+    font-weight: bold;
+}
+#container .siguiendo{
+    margin: 20px auto;
+    width: 50%;
+    text-align: center;
+    background: #c8e9f0;
+    border: 1px solid #045364;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+}
+#container > h2{text-align: center}
+#container > ol{
+    text-align: center;
+    list-style-type: none;
+}
+#container > ol > li{
+    color: #0f7b6e;
+    margin-bottom: 5px;
+}
+
+/* section network */
+#container > .parrafos > p{
+    background: #0f7b6e;
+    border: 1px solid #045364;
+    margin-bottom: 5px;
+    padding: 15px 10px;
+    color: #fff;
+    font-size: 14px;
+}
+#container > .parrafos > p:hover{
+    background: #6bcabe;
+    color: #111;
+}
+/* section footer */
+#pie{
+    clear: both;
+    background: #022830;
+    height: 40px;
+}
+#pie > ul{
+    list-style-type: none;
+    padding: 10px 20px;
+    text-align: center;
+}
+#pie > ul > li{display: inline-block;}
+#pie > ul > li > a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 10px;
+}
+#pie > ul > li > a:hover{text-decoration: underline}

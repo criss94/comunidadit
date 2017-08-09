@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Moviendo el fondo</title>
+        <style>
+            body{
+                background: #000;
+                color: #fff;
+            }
+            div{
+                color: red;
+                font-size: 100px;
+                line-height: 400px;
+                text-shadow: 1px 1px 1px black;
+                font-weight: bold;
+                text-align: center;
+                width: 800px;
+                height: 400px;
+                background: #ccc;
+                margin-bottom: 50px;
+                background: url(fondo3.png);
+                background-repeat: no-repeat;
+            }
+            .uno{background-repeat: repeat}
+            .dos{background-position: right bottom}
+            .tres{background-position: center center}
+            .cuatro{background-position: left bottom}
+            .cinco{background-position: 30px 40px}
+        </style>
+    </head>
+    <body>
+        
+        <h1>Moviendo el fondo</h1>
+        <div class="uno">1</div>
+        <div class="dos">2</div>
+        <div class="tres">3</div>
+        <div class="cuatro">4</div>
+        <div class="cinco">5</div>
+
+    </body>
+</html>

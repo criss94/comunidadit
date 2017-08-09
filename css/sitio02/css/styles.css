@@ -1,0 +1,362 @@
+*{margin: 0;padding: 0;border: 0; box-sizing: border-box;}
+html,body{height: 100%}
+h1{
+    text-align: center;
+    padding: 70px 0px 20px 0px;
+    font-size: 25px;
+    color: #008080;
+}
+h2{
+    color: #333;
+    text-align: center;
+    padding-bottom: 30px;
+}
+/*********** TODO EN CONTENIDO ************/
+#contenedor, .contenedor{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+/*************** HEADER ****************/
+header{
+    width: 100%;
+    background: #111;
+    padding: 15px 0px;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    position: fixed;
+    border-bottom: 1px solid #fff;
+}
+header nav{width: 100%}
+header > nav .nav_general{
+    display: inline-block;
+    width: 70%;
+    justify-content: center;
+    text-align: center;
+    list-style-type: none;
+}
+
+/******** menu desplegable **********/
+header > nav .nav_general > li{position: relative}
+header > nav .nav_general > li .drop{
+    width: 132px;
+    position: absolute;
+    left: -9999px;
+    list-style-type: none;
+    padding-top: 8px;
+}
+header > nav .nav_general > li .drop2{margin-left: -40px}
+header > nav .nav_general > li:hover .drop{
+    position: absolute;
+    left: 0px;
+}
+/********* fin menu desplegable *********/
+header > nav .nav_general > li .drop > li > a{
+    display: inline-block;
+    padding: 8px 9px;
+    width: 100%;
+    color: #fff;
+    background: #8ebcb6;
+    text-decoration: none;
+    font-size: 15px;
+    transition: ease 0.5s all;
+    border: 1px solid #8ebcb6;
+}
+header > nav .nav_general > li .drop > li > a:hover{
+    background: #00FFFF;
+    transition: ease 0.5s all;
+    border-top: 1px solid #008080;    
+    border-bottom: 1px solid #008080;
+    color: #333;
+}
+/*************************************/
+header > nav .nav_general > li,.nav_l_r > li{
+    display: inline-block;
+    margin-right: 10px;
+}
+header > nav .nav_general > li > a,.nav_l_r > li > a{
+    text-decoration: none;
+    color: #00FFFF;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: ease 0.5s all;
+    border: 1px solid #008080;
+}
+header > nav .nav_general > li > a:hover,.nav_l_r > li > a:hover{
+    background: #00FFFF;
+    color: #111;
+    transition: ease 0.5s all;    
+}
+header > nav .nav_l_r{
+    display: inline-block;    
+    width: 28%;
+    justify-content: flex-end;
+    text-align: center;
+    list-style-type: none;
+}
+
+/************ contenido body ************/
+#contenedor .videos{
+    margin: 0px 0px 30px 0px;
+}
+#contenedor .videos .desc_videos > h2{
+    color: #008080;
+    padding: 15px;
+    font-size: 18px;
+}
+#contenedor .videos .desc_videos > p{
+    color: #333;
+    font-size: 14px;
+    padding: 5px 15px 15px 15px;
+}
+#contenedor .videos > table{border-collapse: collapse}
+#contenedor .videos > table > thead > tr > th{
+    color: #008080;
+    font-size: 18px;
+    padding: 0px 0px 10px 0px;
+}
+#contenedor .videos > table > tbody > tr{
+    display: block;
+    margin: 15px 0px;
+}
+#contenedor .videos > table > tbody > tr > td{
+    background: #111;
+    padding: 8px 10px;
+    transition: ease 0.5s all;
+    cursor: pointer;
+}
+#contenedor .videos > table > tbody > tr > td:hover{
+    background: #0c3949;
+    transition: ease 0.5s all;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+}
+#contenedor .videos > table > tbody > tr > td > a{
+    display: block;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #00FFFF;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#contenedor .videos > table > tbody > tr > td > figure > img{
+    display: block;
+    margin: 0 auto;
+}
+#contenedor .videos > table > tbody > tr > td > span{
+    display: inline-block;
+    color: #fff;
+    font-size: 13px;
+    text-align: justify;
+    line-height: 15px;
+    padding: 15px 0px;
+}
+
+/******** data body ********************/
+#data_body{
+    margin: 0px 0px 50px 0px;
+    padding: 5px 20px;
+}
+#data_body .sub_menu_about{
+    list-style-type: none;
+    text-align: center;
+}
+#data_body .sub_menu_about > span{
+    display: block;
+    text-align: center;
+    padding-bottom: 15px;
+    color: #111;
+}
+#data_body .sub_menu_about > li{
+    display: inline-block;
+    margin: 10px;
+}
+#data_body .sub_menu_about > li > a{
+    text-decoration: none;
+    color: #0c3949;
+    font-size: 14px;
+     -webkit-transition: ease 0.5s all;
+    -moz-transition: ease 0.5s all;
+    transition: ease 0.5s all;
+}
+#data_body .sub_menu_about > li > a:hover{
+    
+    font-weight: bold;
+    -webkit-transition: ease 0.5s all;
+    -moz-transition: ease 0.5s all;
+    transition: ease 0.5s all;
+    font-size: 18px;
+    text-decoration: underline;
+}
+#data_body > p{
+    padding: 15px 0px;
+    font-size: 14px;
+    text-align: justify;
+}
+#data_body > p::selection{
+    background: #0c3949;
+    color: #fff;
+}
+#data_body > p::-moz-selection{
+    background: #0c3949;
+    color: #fff;
+}
+#data_body > figure{width: 100%}
+#data_body > figure > img{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+/*********** listado videos *************/
+#listado-videos{
+    margin: 0px auto 50px;
+    padding: 10px 20px;
+    border-collapse: collapse;
+}
+#listado-videos > thead > tr > th{
+    padding: 15px;
+    color: #333;
+}
+#listado-videos > tbody > tr > th{
+    display: block;
+    color: #0c3949;
+    padding: 15px;
+    background: #fff;
+}
+#listado-videos > tbody > tr{
+    display:block;
+    width:100%;
+    background: #111;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+#listado-videos > tbody > tr:hover{
+    background: #0c3949;
+}
+#listado-videos > tbody > tr > td{
+    font-size: 15px;
+    padding: 6px 6px 3px;
+    color: #00FFFF;
+}
+#listado-videos > tbody > tr > td > a{
+    color: #00FFFF;
+    margin-right: 50px; 
+    font-weight: bold;
+    text-decoration: none;
+}
+#listado-videos > tbody > tr > td > a:hover{text-decoration: underline}
+#listado-videos > tbody > tr > td > a > img{
+    background: #fff;
+    padding: 5px;
+    width: 100px;
+    height: 80px;
+}
+#listado-videos > tbody > tr > td > h2{padding-bottom: 10px}
+#listado-videos > tbody > tr > td > p{padding-right: 50px;}
+#listado-videos > tbody > tr > td > h2 > a{
+    font-size: 16px;
+    color: #fff;
+}
+#listado-videos > tfoot{
+    text-align: center;
+    font-size: 14px;
+}
+#listado-videos > tfoot > tr > td > a{
+    color: #0c3949;
+    text-decoration: none;
+}
+
+/*************** galeria ***************/
+#galeria{
+    margin: 0px 0px 50px 0px;
+}
+#galeria > tbody > tr {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+#galeria > tbody > tr > td > figure{
+    padding: 6px;
+    background: #111;
+    border: 1px solid #000;
+    color: #00FFFF;
+    font-size: 13px;
+    text-align: center;
+}
+#galeria > tbody > tr > td > figure > img{
+    width: 100%;
+    height: 200px;
+}
+#galeria > tbody > tr > td > figure > a{
+    display: block;
+    padding: 10px 0px;
+    color: #fff;
+}
+#galeria > tbody > tr > td > figure > figcaption > a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/************** historia ****************/
+#historia{margin: 5px 0px 30px 0px;}
+#historia > figure > img{width: 100%}
+#historia > a{
+    font-size: 14px;
+    color: darkblue;
+    padding: 10px 15px;
+}
+#historia h3{
+    padding: 15px 0px 0px 15px;
+}
+#historia p{
+    padding: 15px 0px 0px 15px;
+}
+#historia > ol{
+    margin: 20px;
+    width: 170px;
+    padding: 20px 50px;
+    border: 1px solid #00FFFF
+}
+#historia > ol > h2{
+    text-align: left;
+}
+#historia > ol > li{margin-bottom: 5px}
+#historia > ol > li > a{text-decoration: none}
+#historia > dl{padding: 10px 20px}
+#historia > dl > dt > a{
+    color: darkblue;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#historia > dl > dt > a:hover{text-decoration: underline}
+#historia > dl > dd{
+    padding: 4px 0px;
+    font-size: 13px;
+}
+#historia > dl > dd > a{color: darkblue;font-weight: bold}
+
+/*************** FOOTER ****************/
+footer, #footer{
+    height: 100px;
+    background: #111;
+    color: #fff;
+    font-size: 13px;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+footer, #footer > a{
+    font-weight: bold;
+    color: #00FFFF;
+    text-decoration: none;
+}
+footer, #footer > p{padding: 5px 0px;color: #fff}
+footer, #footer > p > a{color: #00FFFF;text-decoration: none}
