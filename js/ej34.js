@@ -1,10 +1,8 @@
-let numero1, numero2, numero3;
+let ingresos, ganancias, impuestos, resultado;
 
 let ingresos = 1000;
 let ganancias = 600;
 let impuestos = 500;
-
-let resultado;
 
 //genero $800 mas de ingreso
 ingresos += 800;
@@ -12,6 +10,6 @@ ingresos += 800;
 impuestos -= 300;
 //pagar bono si se pagan justo $600
 ganancias += 200;
-console.log(ingresos >= ingresos);
-console.log(impuestos < impuestos);
-console.log(ganancias == ganancias);
+console.log(ingresos >= 800);
+console.log(impuestos < 400);
+console.log(ganancias == 600);
