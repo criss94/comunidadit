@@ -1,12 +1,12 @@
 let numero = 0;
 
-while (numero < 11) {
+do{
     let texto = '';
     let contador = 0;
-    while(contador < numero){
+    do{
         texto += '*';
         contador++;
-    }
+    } while(contador < numero)
     numero++;
     console.log(texto);
-}
+} while (numero < 11)

@@ -31,23 +31,23 @@ switch (numeroDeMes) {
         nombreDelMes = 'julio';
         cantidadDeDias = 31;
         break;
-    case 3:
+    case 8:
         nombreDelMes = 'agosto';
         cantidadDeDias = 31;
         break;
-    case 4:
+    case 9:
         nombreDelMes = 'septiembre';
         cantidadDeDias = 30;
         break;
-    case 5:
+    case 10:
         nombreDelMes = 'octubre';
         cantidadDeDias = 31;
         break;
-    case 6:
+    case 11:
         nombreDelMes = 'noviembre';
         cantidadDeDias = 30;
         break;
-    case 7:
+    case 12:
         nombreDelMes = 'diciembre';
         cantidadDeDias = 31;
         break;
