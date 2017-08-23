@@ -3,7 +3,6 @@ function ordenarNúmeros(numero1, numero2, numero3, descendente){
     //verifico el valor booleano si es verdadero
     if(descendente){
         //ordeno de mayor a menor
-        //ordeno de menor a mayor
         if(numero1 > numero2 && numero2 > numero3 && numero3 < numero1){
             return `${numero1} ${numero2} ${numero3} primer if`;
         }else if(numero2 > numero3 && numero3 < numero1 && numero1 < numero2){

@@ -1,5 +1,5 @@
 
-const mostrarNombre = function(){
-    console.log('= Cristian =');
+const mostrarNombre = function(nombre){
+    console.log('= ' + nombre + ' =');
 }
-mostrarNombre();
+mostrarNombre('cristian');
