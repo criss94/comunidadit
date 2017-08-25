@@ -18,3 +18,4 @@ mutantes.forEach(function(mutante){
 
 let texto = 'los mejores guerreros son: ';
 console.log(texto.concat('Jean Elaine Grey y James "Logan" Howlett'));
+//corregir

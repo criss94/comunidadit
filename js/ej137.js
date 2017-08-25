@@ -28,6 +28,6 @@ nuevoArray.forEach(function(valor, indice){
     if(contador2 == 10){
         return;
     }
-    console.log(`indice: ${indice} | valor: ${valor} | valor incrementado de los primeros 10: ${valor}`);
+    console.log(`indice: ${indice} | valor: ${numeros[indice]} | valor incrementado: ${valor}`);
     contador2++;
 });
