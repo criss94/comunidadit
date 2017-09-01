@@ -160,8 +160,8 @@ const juegos = [
     }
 ];
 
-zona = 3;
-switch (zona) {
+zona = 32;
+/*switch (zona) {
     case 1:
         localidadFiltrada = 'Capital Federal';
         juegos.filter(function(juego) {
@@ -198,4 +198,21 @@ switch (zona) {
             }
         });
         break;
+}*/
+
+function ordenarPorPrecio(){
+    let savePrecio = [];
+    juegos.forEach(function(precio){
+        //let pre = precio.precio;
+        //let precioOrdenado = pre.sort();
+        //precioOrdenado.imprimirEnPantalla();
+        //console.log(precio.imprimirEnPantalla());
+
+        let arrayDePrecios = savePrecio.push(precio.precio);
+        //let savePrecio2 = savePrecio.sort();
+        //precio.imprimirEnPantalla();
+        //console.log(arrayNumerico);
+    });
 }
+
+ordenarPorPrecio();
