@@ -1,6 +1,4 @@
-let zona = 1;
-let localidadFiltrada;
-
+//array de objetos
 const juegos = [
     {
         nombre: 'Crash Bandicoot N. Sane Trilogy Juego Ps4 Fisico Sellado',
@@ -9,7 +7,7 @@ const juegos = [
         localidad: 'Capital Federal',
         imprimirEnPantalla:  function(){
             console.log(`${this.nombre}`);
-            console.log(`${this.precio}`);
+            console.log(`$ ${this.precio}`);
             console.log(`${this.cantidadVendida}`);
             console.log(`${this.localidad}`);
         }
@@ -21,7 +19,7 @@ const juegos = [
         localidad: 'Capital Federal',
         imprimirEnPantalla:  function(){
             console.log(`${this.nombre}`);
-            console.log(`${this.precio}`);
+            console.log(`$ ${this.precio}`);
             console.log(`${this.cantidadVendida}`);
             console.log(`${this.localidad}`);
         }
@@ -33,7 +31,7 @@ const juegos = [
         localidad: 'Santa Fe',
         imprimirEnPantalla:  function(){
             console.log(`${this.nombre}`);
-            console.log(`${this.precio}`);
+            console.log(`$ ${this.precio}`);
             console.log(`${this.cantidadVendida}`);
             console.log(`${this.localidad}`);
         }
@@ -45,7 +43,7 @@ const juegos = [
         localidad: 'Capital Federal',
         imprimirEnPantalla:  function(){
             console.log(`${this.nombre}`);
-            console.log(`${this.precio}`);
+            console.log(`$ ${this.precio}`);
             console.log(`${this.cantidadVendida}`);
             console.log(`${this.localidad}`);
         }
@@ -57,7 +55,7 @@ const juegos = [
         localidad: 'Buenos Aires',
         imprimirEnPantalla:  function(){
             console.log(`${this.nombre}`);
-            console.log(`${this.precio}`);
+            console.log(`$ ${this.precio}`);
             console.log(`${this.cantidadVendida}`);
             console.log(`${this.localidad}`);
         }
@@ -69,7 +67,7 @@ const juegos = [
         localidad: 'Capital Federal',
         imprimirEnPantalla:  function(){
             console.log(`${this.nombre}`);
-            console.log(`${this.precio}`);
+            console.log(`$ ${this.precio}`);
             console.log(`${this.cantidadVendida}`);
             console.log(`${this.localidad}`);
         }
@@ -81,7 +79,7 @@ const juegos = [
         localidad: 'Capital Federal',
         imprimirEnPantalla:  function(){
             console.log(`${this.nombre}`);
-            console.log(`${this.precio}`);
+            console.log(`$ ${this.precio}`);
             console.log(`${this.cantidadVendida}`);
             console.log(`${this.localidad}`);
         }
@@ -93,7 +91,7 @@ const juegos = [
         localidad: 'Capital Federal',
         imprimirEnPantalla:  function(){
             console.log(`${this.nombre}`);
-            console.log(`${this.precio}`);
+            console.log(`$ ${this.precio}`);
             console.log(`${this.cantidadVendida}`);
             console.log(`${this.localidad}`);
         }
@@ -105,7 +103,7 @@ const juegos = [
         localidad: 'Capital Federal',
         imprimirEnPantalla:  function(){
             console.log(`${this.nombre}`);
-            console.log(`${this.precio}`);
+            console.log(`$ ${this.precio}`);
             console.log(`${this.cantidadVendida}`);
             console.log(`${this.localidad}`);
         }
@@ -117,7 +115,7 @@ const juegos = [
         localidad: 'Capital Federal',
         imprimirEnPantalla:  function(){
             console.log(`${this.nombre}`);
-            console.log(`${this.precio}`);
+            console.log(`$ ${this.precio}`);
             console.log(`${this.cantidadVendida}`);
             console.log(`${this.localidad}`);
         }
@@ -129,7 +127,7 @@ const juegos = [
         localidad: 'Capital Federal',
         imprimirEnPantalla:  function(){
             console.log(`${this.nombre}`);
-            console.log(`${this.precio}`);
+            console.log(`$ ${this.precio}`);
             console.log(`${this.cantidadVendida}`);
             console.log(`${this.localidad}`);
         }
@@ -141,7 +139,7 @@ const juegos = [
         localidad: 'Capital Federal',
         imprimirEnPantalla:  function(){
             console.log(`${this.nombre}`);
-            console.log(`${this.precio}`);
+            console.log(`$ ${this.precio}`);
             console.log(`${this.cantidadVendida}`);
             console.log(`${this.localidad}`);
         }
@@ -153,66 +151,84 @@ const juegos = [
         localidad: 'Capital Federal',
         imprimirEnPantalla:  function(){
             console.log(`${this.nombre}`);
-            console.log(`${this.precio}`);
+            console.log(`$ ${this.precio}`);
             console.log(`${this.cantidadVendida}`);
             console.log(`${this.localidad}`);
         }
     }
 ];
 
-zona = 32;
-/*switch (zona) {
-    case 1:
-        localidadFiltrada = 'Capital Federal';
-        juegos.filter(function(juego) {
-            if(juego.localidad === 'Capital Federal'){
-                juego.imprimirEnPantalla();
-                console.log('\n');
-            }
-        });
-        break;
-    case 2:
-        localidadFiltrada = 'Santa Fe';
-        juegos.filter(function(juego) {
-            if(juego.localidad === 'Santa Fe'){
-                juego.imprimirEnPantalla();
-                console.log('\n');
-            }
-        });
-        break;
-    case 3:
-        localidadFiltrada = 'Buenos Aires';
-        juegos.filter(function(juego) {
-            if(juego.localidad === 'Buenos Aires'){
-                juego.imprimirEnPantalla();
-                console.log('\n');
-            }
-        });
-        break;
-    default:
-        localidadFiltrada = 'Capital Federal';
-        juegos.filter(function(juego) {
-            if(juego.localidad === 'Capital Federal'){
-                juego.imprimirEnPantalla();
-                console.log('\n');
-            }
-        });
-        break;
-}*/
+//funcion que ordena los precios de los juegos de menor a mayor y viceversa
+function ordenarPorPrecio(opcion){
 
-function ordenarPorPrecio(){
-    let savePrecio = [];
-    juegos.forEach(function(precio){
-        //let pre = precio.precio;
-        //let precioOrdenado = pre.sort();
-        //precioOrdenado.imprimirEnPantalla();
-        //console.log(precio.imprimirEnPantalla());
-
-        let arrayDePrecios = savePrecio.push(precio.precio);
-        //let savePrecio2 = savePrecio.sort();
-        //precio.imprimirEnPantalla();
-        //console.log(arrayNumerico);
+    let guardarPrecio = [];
+    //recorro los juegos para extraer solo precios de cada juego
+    juegos.forEach(function(precios){
+        //los almaceno en el array creado antes
+        guardarPrecio.push(precios['precio']);
     });
+    
+    //verifico si el parametro q me pasaron es 'ASC', entonces ordno solo los precios de menor a mayor
+    if(opcion.toLowerCase() === 'asc'){
+        //lo almaceno en su misma variable ascendentemente
+        guardarPrecio = guardarPrecio.sort(function(a, b){
+            return a - b;
+        });
+        //recorro los precios ya ordenados de menor a mayor
+        for(let x = 0; x < guardarPrecio.length; x++){
+            //tambien recorro los juegos
+            juegos.forEach(function(j){
+                //y comparo solo los precios, y me imprime si se cumple dicha condicion
+                if(guardarPrecio[x] === j['precio']){
+                    //imprimo si son iguales
+                    j['imprimirEnPantalla']();
+                    console.log('\n');
+                }  
+            });
+        }  
+    }else if(opcion.toLowerCase() === 'desc'){
+        //lo almaceno en su misma variable ascendentemente
+        guardarPrecio = guardarPrecio.sort(function(a, b){
+            return b - a;
+        });
+        //recorro los precios ya ordenados de mayor a menor
+        for(let x = 0; x < guardarPrecio.length; x++){
+            //tambien recorro los juegos
+            juegos.forEach(function(j){
+                //y comparo solo los precios, y me imprime si se cumple dicha condicion
+                if(guardarPrecio[x] === j['precio']){
+                    //imprimo si son iguales
+                    j['imprimirEnPantalla']();
+                    console.log('\n');
+                }  
+            });
+        }  
+    }else if(opcion){
+        //almaceno los precios de mayor a menor
+        guardarPrecio = guardarPrecio.sort(function(a, b){
+            return b - a;
+        });
+        //recorro los precios ya ordenados de mayor a menor
+        for(let x = 0; x < guardarPrecio.length; x++){
+            //tambien recorro los juegos
+            juegos.filter(function(juego) {
+                //le pregunto si el precio ordenado es igual al precio filtrado continue
+                if(guardarPrecio[x] === juego.precio){
+                    //y si el juego filtrado con localidad 'X' es igual al parametro pasado x el user
+                    if(juego.localidad === opcion){
+                        //imprimo solo a esos que cumplen con las 2 condiciones
+                        juego.imprimirEnPantalla();
+                        console.log('\n');
+                    }
+                }
+            });
+        }
+
+    }else{
+        console.log('Elija de que forma quiere ver los productos: "asc" ó "desc"');
+    }
+
 }
 
-ordenarPorPrecio();
+// Capital Federal
+ordenarPorPrecio('asc');
