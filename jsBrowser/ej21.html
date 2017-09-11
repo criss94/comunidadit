@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Elementos</title>
+  <style>
+    .rojo {
+      color: red;
+    }
+    .verde {
+      color: green;
+    }
+    .naranja {
+      color: orange;
+    }
+  </style>
+  <script>
+      window.onload = function(){
+
+          let primerLI = document.querySelectorAll('li');
+            primerLI.forEach(li => {
+                li.classList.add('naranja');
+                li.nextElementSibling.classList.add('naranja');
+            });
+      }
+  </script>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</body>
+</html>

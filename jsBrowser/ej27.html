@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Todo ECMAScript Baby!!</title>
+  <script>
+      window.onload = function(){
+          let body = document.querySelector('body');
+          
+          let numeros = [];
+          for(let i=1; i <= 100; i++){
+            numeros[i] = i;
+            console.log(numeros[i]);
+          }
+
+          let ul = document.createElement('ul');
+          for(let x=1; x < numeros.length; x++){
+            let li = document.createElement('li');
+                li.textContent = `Item ${x}`;
+                if(x % 2 == 0){
+                    li.style.color = '#ddd';
+                }else{
+                    li.style.color = '#eee';
+                }
+                ul.appendChild(li);
+          }
+
+          body.appendChild(ul);
+
+
+      }
+  </script>
+</head>
+<body>
+    
+</body>
+</html>
