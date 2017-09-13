@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eventos</title>
+    <script>
+        window.onload = function(){
+            let button1 = document.querySelector('button');
+            let button2 = document.getElementById('segundo-boton');
+
+            function saludar(){
+                alert('Hiciste click en un botón controlado con addEventListener');
+            }
+
+            button1.addEventListener('click', saludar);
+
+            button2.onclick = function(){
+                button1.removeEventListener('click', saludar);            
+            }
+        }
+    </script>
+  </head>
+  <body>
+
+    <ul></ul>
+    <button id="primer-boton">Haceme Click!!</button>
+    <button id="segundo-boton">Sacar handler</button>
+    <a href="http://google.com">Hipervinculo controlado por ECMAScript</a>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eventos</title>
+    <style>
+        .tachado{ text-decoration: line-through }
+        li{cursor: pointer}
+    </style>
+    <script>
+        window.onload = function(){
+            const body = document.querySelector('body');
+            const ul = document.createElement('ul');
+            const arrayDeCosas = [
+                'estudiar JS',
+                'estudiar Jquery & Ajax',
+                'repasar laravel',
+                'repasar codeigniter',
+                'repasar APIS de redes sociales',
+                'estudiar nodeJS y mongoDB',
+                'repasar bootstrap 3 y 4',
+                'estudiar ingles',
+                'ver videos online sobre Programacion',
+                'hacer los ejercicios de JS'
+            ];
+
+            for(let i = 0; i < arrayDeCosas.length; i++){
+                let li = document.createElement('li');
+                    li.addEventListener('click', function(){
+                        li.classList.toggle('tachado');
+                    });
+                    li.textContent = arrayDeCosas[i];
+                    ul.appendChild(li);
+            }
+            body.appendChild(ul);
+
+        }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

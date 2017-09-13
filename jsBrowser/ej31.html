@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prductos</title>
+  </head>
+  <script>
+      window.onload = function(){
+            let ul = document.querySelector('ul');
+
+            for(let i = 6; i >= 0; i--){
+                //creo variables dinamicamente para almacenar cada elemento li del ul
+                window['list' + i] = ul.children[i];
+            }
+            ul.innerHTML = '';
+            //console.log(list5);
+      }
+  </script>
+  <body>
+    <ul>
+      <li>Bananas</li>
+      <li>Manzanas</li>
+      <li>Peras</li>
+      <li>Huevos</li>
+      <li>Tomates</li>
+      <li>Lechuga</li>
+      <li>Leche</li>
+    </ul>
+  </body>
+</html>
