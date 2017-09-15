@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Propiedades del form</title>
+  <script>
+      window.onload = function(){
+        const form = document.querySelector('form');
+        const body = document.querySelector('body');
+        let ul = document.createElement('ul');
+        let li;
+
+        let atributos = ['action','method','enctype','name'];
+
+        for(let x=0; x < atributos.length; x++){
+            li = document.createElement('li');
+            li.innerHTML +=  `<b>${atributos[x]}: </b> ${form.attributes[x].value}`;
+            ul.appendChild(li);
+        }
+
+        body.appendChild(ul);
+        
+      }
+  </script>
+</head>
+<body>
+  <form action="guardar_usuario.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Enviar" />
+  </form>
+</body>
+</html>

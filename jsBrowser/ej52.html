@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Validar form</title>
+  <style>
+    .error {
+      font-weight: bold;
+      color: red;
+    }
+    .success {
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+        const films = 'https://swapi.co/api/films/';
+        var xmlhttp = new XMLHttpRequest();
+        const body = document.querySelector('body');
+        const ul = document.createElement('ul');
+
+        xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    //console.log(xmlhttp.responseText);
+                    const pelis = xmlhttp.responseText;
+                    for(let i=0; i < pelis.length; i++){
+                        //console.log(pelis[i]);
+                    }
+
+                }
+        };
+
+        //este ejer. falta terminar
+
+        xmlhttp.open("GET", films, true);
+
+        xmlhttp.send();
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>
