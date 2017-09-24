@@ -1,0 +1,17 @@
+{
+  "name": "ejercicio3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "logplease": "^1.2.14"
+  }
+}

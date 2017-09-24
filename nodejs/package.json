@@ -1,0 +1,14 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ej9.js",
+  "scripts": {
+    //"start": "node ej9.js"
+  },
+  "author": "criss",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}

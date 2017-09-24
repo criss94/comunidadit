@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            const body = document.querySelector('body');
+            const div = document.createElement('div');
+            const ul = document.createElement('ul');
+            const images = ['batman','flash','superman','wonder_woman','batman','flash','superman','wonder_woman','batman','flash'];
+            let numero = 0;
+            let img;
+
+            while (numero < 11) {
+                let contador = 0;
+                let li = document.createElement('li');
+                while(contador < numero){
+                    img = document.createElement('img');
+                    let oleatorio = Math.floor((Math.random() * 10) + 0);
+                    img.src = '/ej42/imgs/' + images[oleatorio] + '.png';
+                    img.style.width = '32px';
+                    img.style.height = '32px';
+                    
+                    li.appendChild(img);
+                    contador++;
+                }
+                ul.appendChild(li);
+                numero++;
+            }
+            ul.style.listStyle = 'none';
+            
+            div.appendChild(ul);
+            body.appendChild(div);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
